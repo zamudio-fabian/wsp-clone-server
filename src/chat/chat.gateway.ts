@@ -101,7 +101,8 @@ export class ChatGateway
   startWsp(clientId: string) {
 
     this.clients[clientId] = new Client({
-      authStrategy: new LocalAuth({ clientId })
+      authStrategy: new LocalAuth({ clientId }),
+      puppeteer: {headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox']},
     });
     
     this.clients[clientId].on("authenticated", (e) => {
