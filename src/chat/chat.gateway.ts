@@ -13,7 +13,7 @@ import { LocalAuth } from 'whatsapp-web.js';
 const { Client, Events } = require("whatsapp-web.js");
 
 
-@WebSocketGateway(80, {
+@WebSocketGateway(81, {
   cors: { origin: '*' },
 })
 export class ChatGateway
